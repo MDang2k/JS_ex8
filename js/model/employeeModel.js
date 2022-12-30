@@ -1,4 +1,4 @@
-function SinhVien(
+function Employee(
     _account,
     _name,
     _pass,

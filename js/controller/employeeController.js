@@ -23,51 +23,31 @@ function getInformation() {
     return employee;
 }
 
-function renderDSSV(empArr) {
-    // render dssv ra table
+function renderEmployeeList(empArr) {
     var contentHTML = "";
     for (var index = 0; index < empArr.length; index++) {
         var item = empArr[index];
         var contentTr = `<tr>
-                          <td>${item.ma}</td>
-                          <td>${item.ten}</td>
+                          <td>${item.acc}</td>
+                          <td>${item.name}</td>
                           <td>${item.email}</td>
-                          <td>${item.tinhDTB()}</td>
-                          <td>
-                           <button onclick="xoaSinhVien('${
-                             item.ma
-                           }')" class="btn btn-danger">Xoá</button>
-  
-                           <button onclick="suaSinhVien('${
-                             item.ma
-                           }')" class="btn btn-warning">Sửa</button>
-                          </td>
+                          <td>${item.day}</td>
+                          <td>${item.position}</td>
+                          <td>${item.calSalary()}</td>   
                        </tr>`;
         contentHTML += contentTr;
     }
-    document.getElementById("tbodySinhVien").innerHTML = contentHTML;
+    document.getElementById("tableDanhSach").innerHTML = contentHTML;
 }
 
-function timKiemViTri(id, arr) {
-    var viTri = -1;
 
-    for (var index = 0; index < arr.length; index++) {
-        var sv = arr[index];
-        if (sv.ma == id) {
-            viTri = index;
-            break;
-        }
-    }
-    return viTri;
-}
-
-function showThongTinLenForm(emp) {
-    document.getElementById("tknv").value = emp.;
-    document.getElementById("name").value = emp.;
-    document.getElementById("email").value = emp.;
-    document.getElementById("password").value = emp.;
-    document.getElementById("datepicker").value = emp.;
-    document.getElementById("luongCB").value = emp.;
-    document.getElementById("chucvu").value = emp.;
-    document.getElementById("gioLam").value = emp.;
+function showEmployeeInfo(emp) {
+    document.getElementById("tknv").value = emp.acc;
+    document.getElementById("name").value = emp.name;
+    document.getElementById("email").value = emp.email;
+    document.getElementById("password").value = emp.pass;
+    document.getElementById("datepicker").value = emp.day;
+    document.getElementById("luongCB").value = emp.wage;
+    document.getElementById("chucvu").value = emp.position;
+    document.getElementById("gioLam").value = emp.hour;
 }

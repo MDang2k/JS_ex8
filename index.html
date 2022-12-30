@@ -187,7 +187,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 </div>
-                                <input type="text" name="tk" id="tknv" class="form-control input-sm" placeholder="Tài khoản">
+                                <input type="number" name="tk" id="tknv" class="form-control input-sm" placeholder="Tài khoản">
                             </div>
 
                             <span class="sp-thongbao" id="tbTKNV"></span>
@@ -274,7 +274,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer" id="modal-footer">
-                    <button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
+                    <button id="btnThemNV" type="button" class="btn btn-success" onclick="addEmployee()">Thêm người dùng</button>
                     <button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
                     <button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
                 </div>
@@ -309,6 +309,8 @@
         });
     </script>
 
+    <!-- Employee Model  -->
+    <script src="./js/model/employeeModel.js"></script>
     <!-- Controller  -->
     <script src="./js/controller/employeeController.js"></script>
     <!-- Validate  -->
