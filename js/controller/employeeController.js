@@ -47,6 +47,11 @@ function renderEmployeeList(empArr) {
                           <td>${pos}</td>
                           <td>${item.calSalary()}</td>   
                           <td>${item.ranking()}</td>   
+                          <td>
+                          <button onclick="deleteEmployee('${
+                            item.acc
+                          }')" class="btn btn-danger">Delete</button>
+                          </td>
                        </tr>`;
         contentHTML += contentTr;
     }
