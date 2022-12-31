@@ -1,8 +1,8 @@
 // true => hợp lệ
 
-function kiemTraTrung(idSv, svArr) {
-    var index = svArr.findIndex(function(item) {
-        return idSv == item.ma;
+function checkIdentical(id, empArr) {
+    var index = empArr.findIndex(function(item) {
+        return id == item.ma;
     });
     if (index == -1) {
         // ko tìm thấy

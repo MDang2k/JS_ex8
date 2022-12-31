@@ -10,12 +10,12 @@ if (listJson != null) {
         return new Employee(
             item.acc,
             item.name,
-            item.email,
             item.pass,
-            item.wage,
+            item.email,
             item.day,
-            item.hour,
-            item.position
+            item.wage,
+            item.position,
+            item.hour
         );
     });
     renderEmployeeList(empList);

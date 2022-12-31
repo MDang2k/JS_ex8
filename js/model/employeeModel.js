@@ -18,5 +18,14 @@ function Employee(
     this.hour = _hour * 1;
     this.calSalary = function() {
         return (this.wage * this.hour * this.position)
+    };
+    this.ranking = function() {
+        if (this.hour >= 192)
+            return "Xuất xắc"
+        else if (this.hour >= 176)
+            return "Giỏi"
+        else if (this.hour >= 160)
+            return "Khá"
+        else return "Trung bình"
     }
 }

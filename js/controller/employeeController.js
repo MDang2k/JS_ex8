@@ -27,13 +27,26 @@ function renderEmployeeList(empArr) {
     var contentHTML = "";
     for (var index = 0; index < empArr.length; index++) {
         var item = empArr[index];
+        var pos = ""
+        switch (item.position) {
+            case 3:
+                pos = "Sếp"
+                break;
+            case 2:
+                pos = "Trưởng phòng"
+                break;
+            case 1:
+                pos = "Nhân viên"
+                break;
+        }
         var contentTr = `<tr>
                           <td>${item.acc}</td>
                           <td>${item.name}</td>
                           <td>${item.email}</td>
                           <td>${item.day}</td>
-                          <td>${item.position}</td>
+                          <td>${pos}</td>
                           <td>${item.calSalary()}</td>   
+                          <td>${item.ranking()}</td>   
                        </tr>`;
         contentHTML += contentTr;
     }
